@@ -28,7 +28,7 @@ public class PartyIndicator {
 
     boolean excellent = ((boys == girls) && (boys + girls >= 20));
     boolean quiteCoolParty = ((boys + girls >= 20) && ((boys < girls) || (boys > girls) && (girls != 0)));
-    boolean averageParty = (boys + girls < 20);
+    boolean averageParty = (boys + girls < 20) && girls != 0;
     boolean sausageParty = (girls == 0);
 
     if (excellent) {

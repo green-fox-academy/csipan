@@ -16,5 +16,7 @@ public class CodingHours {
 
     double workhours = 52;
     System.out.println((hour * week * day) / (workhours * week) * 100 + " %");
+    System.out.println((hour / (workhours / 5)) * 100 + " %");
+    System.out.println((hour * day / workhours) * 100 + " %");
   }
 }

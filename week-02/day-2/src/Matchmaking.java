@@ -8,9 +8,20 @@ public class Matchmaking{
     // Write a method that joins the two lists by matching one girl with one boy into a new list
     // Exepected output: "Eve", "Joe", "Ashley", "Fred"...
 
-//    System.out.println(makingMatches(girls, boys));
-//  }
-//  public static ArrayList makingMatches(ArrayList girlsAndBoys) {
-//    girlsAndBoys.
+
+    makingMatches(girls, boys);
+  }
+
+  public static void makingMatches(ArrayList girls, ArrayList boys) {
+    int arraySize = girls.size();
+    for (int i = 0; i <= girls.size(); i += 1) {
+      if (i < arraySize) {
+      System.out.print(girls.get(i) + " ");
+      System.out.print(boys.get(i) + " ");
+      }
+      else  {
+        System.out.print(boys.get(i) + " ");
+      }
+    }
   }
 }

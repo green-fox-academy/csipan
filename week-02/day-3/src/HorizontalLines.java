@@ -11,13 +11,14 @@ public class HorizontalLines {
     // and draws a 50 long horizontal line from that point.
     // Draw 3 lines with that function. Use loop for that.
 
+
     graphics.setColor(Color.blue);
-    horizontalLine(10, 20, 30, graphics);
+    horizontalLine(10, 10, 30, graphics);
   }
 
   public static void horizontalLine(int x, int y, int z, Graphics graphics) {
     for (int i = 1; i <= 3; i += 1) {
-      graphics.drawLine(i * 10 + x, i * 10 + y,i * 10 + 60, i * 10 + y);
+      graphics.drawLine(x, i * 100 + y,x + 50, i * 100 + y);
     }
   }
 

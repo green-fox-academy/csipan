@@ -9,7 +9,7 @@ public class PurpleSteps {
     // Reproduce this:
     // [https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/drawing/purple-steps/r3.png]
 
-    for (int i = 0; i <= 30; i += 1) {
+    for (int i = 0; i <= 5; i += 1) {
       int xCordinate = 0 + i * 30;
       int yCoordinate = 0 + i * 30;
       purpleSteps(xCordinate, yCoordinate, graphics);

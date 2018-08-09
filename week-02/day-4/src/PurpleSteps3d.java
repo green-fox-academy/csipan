@@ -11,7 +11,7 @@ public class PurpleSteps3d {
 
     int coordinate = 0;
     int size = 2;
-    for (int i = 0; i <= 30; i += 1) {
+    for (int i = 1; i <= 6; i += 1) {
       size *= 2;
       coordinate = size;
       purpleSteps(coordinate, size, graphics);

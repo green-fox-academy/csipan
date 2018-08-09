@@ -12,14 +12,14 @@ public class RainbowBoxFunction {
     // Create a loop that fills the canvas with rainbow colored squares.
 
     for (int i = 1; i <= 3; i += 1) {
-      int size = (int) (Math.random() * 200);
-      graphics.setColor(Color.yellow);
-      rainbowBox(size, graphics);
+      int size = 250 - i * 50;  // csökkentem a kockák méretét. azért csökkentem, hogy mindig látható legyen az újabb kocka
+      int color = 50 + i * 70;  // a színskála 0-255, és minden kockának más színt adok meg
+      rainbowBox(size, color, graphics);
     }
   }
-  public static void  rainbowBox (int size, Graphics graphics) {
+  public static void  rainbowBox (int size, int color, Graphics graphics) {
+    graphics.setColor(new Color(color));
     graphics.fillRect(WIDTH / 2 - size / 2, HEIGHT / 2 - size / 2, size, size);
-    graphics.setColor(Color.black);
     graphics.drawRect(WIDTH / 2 - size / 2, HEIGHT / 2 - size / 2, size, size);
   }
 

@@ -22,7 +22,7 @@ public class LineInTheMiddle {
   static int HEIGHT = 343;
 
   public static void main(String[] args) {
-    JFrame jFrame = new JFrame("Drawing");
+    JFrame jFrame = new JFrame("LineInTheMiddle");
     jFrame.setSize(new Dimension(WIDTH, HEIGHT));
     jFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     jFrame.add(new ImagePanel());

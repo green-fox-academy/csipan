@@ -16,7 +16,6 @@ public class RainbowBoxFunction {
       graphics.setColor(Color.yellow);
       rainbowBox(size, graphics);
     }
-
   }
   public static void  rainbowBox (int size, Graphics graphics) {
     graphics.fillRect(WIDTH / 2 - size / 2, HEIGHT / 2 - size / 2, size, size);
@@ -29,7 +28,7 @@ public class RainbowBoxFunction {
   static int HEIGHT = 343;
 
   public static void main(String[] args) {
-    JFrame jFrame = new JFrame("Drawing");
+    JFrame jFrame = new JFrame("RainbowBoxFunction");
     jFrame.setSize(new Dimension(WIDTH, HEIGHT));
     jFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     jFrame.add(new ImagePanel());

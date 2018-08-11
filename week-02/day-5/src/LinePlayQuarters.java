@@ -52,27 +52,44 @@ public class LinePlayQuarters {
       graphics.drawLine(xGreen21, i, i, yGreen22);
     }
 
-
     int xPurple31 = 300;
     int yPurple31 = 0;
     int xPurple32 = 600;
     int yPurple32 = 20;
     for (int i = 20; i < 290; i += 20) {
-      xPurple31 = i;
-      yPurple32 = i;
+      xPurple31 = 300 + i;
       graphics.setColor(new Color(177, 69, 243));
-      graphics.drawLine(i, yPurple31, xPurple32, i);
+      graphics.drawLine(xPurple31, yPurple31, xPurple32, i);
+    }
+
+    int xGreen31 = 300;
+    int yGreen31 = 0;
+    int xGreen32 = 300;
+    int yGreen32 = 300;
+    for (int i = 20; i < 290; i += 20) {
+      xGreen32 = 300 + i;
+      graphics.setColor(Color.green);
+      graphics.drawLine(xGreen31, i, xGreen32, yGreen32);
+    }
+
+    int xPurple41 = 0;
+    int yPurple41 = 300;
+    int xPurple42 = 300;
+    int yPurple42 = 320;
+    for (int i = 20; i < 290; i += 20) {
+      yPurple42 = 300 + i;
+      graphics.setColor(new Color(177, 69, 243));
+      graphics.drawLine(i, yPurple41, xPurple42, yPurple42);
     }
 
     int xGreen41 = 0;
     int yGreen41 = 300;
-    int xGreen42 = 300;
-    int yGreen42 = 300;
-    for (int i = 290; i > 0; i -= 20) {
-      yGreen41 = i;
-      xGreen42 = i;
+    int xGreen42 = 20;
+    int yGreen42 = 600;
+    for (int i = 20; i < 290; i += 20) {
+      yGreen41 = 300 + i;
       graphics.setColor(Color.green);
-      graphics.drawLine(xGreen41, i, i, yGreen42);
+      graphics.drawLine(xGreen41, yGreen41, i, yGreen42);
     }
   }
 //  public static void linePlayPurple(int x1, int y1, int x2, int y2, Graphics graphics) {

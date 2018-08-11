@@ -28,7 +28,26 @@ public class EnvelopeStar {
       graphics.drawLine(i, yGreen21, xGreen22, yGreen22);
     }
 
+    int xGreen31 = 0;
+    int yGreen31 = 300;
+    int xGreen32 = 300;
+    int yGreen32 = 280;
+    for (int i = 20; i <= 300; i += 20) {
+      yGreen32 = 300 - i;
+      graphics.setColor(Color.green);
+      graphics.drawLine(i, yGreen31, xGreen32, yGreen32);
+    }
 
+    int xGreen41 = 300;
+    int yGreen41 = 320;
+    int xGreen42 = 600;
+    int yGreen42 = 300;
+    for (int i = 20; i <= 300; i += 20) {
+      yGreen41 = 300 + i;
+      xGreen42 = 600 - i;
+      graphics.setColor(Color.green);
+      graphics.drawLine(xGreen41, yGreen41, xGreen42, yGreen42);
+    }
   }
 
 

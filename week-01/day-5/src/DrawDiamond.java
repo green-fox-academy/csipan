@@ -22,31 +22,51 @@ public class DrawDiamond {
     System.out.println();
 
     if (number % 2 == 0) {
+      int spaceUpperPart = number - 1;
       for (int row = 1; row <= number / 2; row += 1) {
-        for (int col = 1; col <= row; col += 1) {
-          System.out.print("*");
+        for (int i = 1; i <= number / 2 - row; i += 1){
+          System.out.print(" ");
         }
-        System.out.println();
-      }
-      for (int row = 1; row <= number; row += 1) {
-        for (int col = number / 2; col >= row; col -= 1) {
+        for (int column = 1; column <= 2 * row - 1; column  += 1){
           System.out.print("+");
         }
         System.out.println();
+        spaceUpperPart = spaceUpperPart - 1;
+      }
+      int spaceDownPart = 0;
+      for (int row = 1; row <= number / 2; row += 1) {
+        for (int i = row - 1; i >= 1; i -= 1) {
+          System.out.print(" ");
+        }
+        for (int column = number - 1; column >= 2 * row - 1; column -= 1) {
+          System.out.print("+");
+        }
+        System.out.println();
+        spaceDownPart = spaceDownPart + 1;
       }
     }
-    else if (number % 2 != 0) {
-      for (int row = 1; row <= (number / 2) + 1; row += 1) {
-        for (int col = 1; col <= row; col += 1) {
-          System.out.print("*");
+    else {
+      int spaceUpperPart = number - 1;
+      for (int row = 1; row <= number / 2 + 1; row += 1) {
+        for (int i = 1; i <= number / 2 + 1 - row; i += 1){
+          System.out.print(" ");
+        }
+        for (int column = 1; column <= 2 * row - 1; column  += 1){
+          System.out.print("+");
         }
         System.out.println();
+        spaceUpperPart = spaceUpperPart - 1;
       }
-      for (int row = 1; row <= number; row += 1) {
-        for (int col = number / 2; col >= row; col -= 1) {
-          System.out.print("/");
+      int spaceDownPart = 0;
+      for (int row = 1; row <= number / 2 + 1; row += 1) {
+        for (int i = row; i >= 1; i -= 1) {
+          System.out.print(" ");
+        }
+        for (int column = number - 1; column >= 2 * row; column -= 1) {
+          System.out.print("+");
         }
         System.out.println();
+        spaceDownPart = spaceDownPart + 1;
       }
     }
   }

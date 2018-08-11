@@ -20,8 +20,8 @@ public class DrawPyramid {
     System.out.println();
 
     int noOfSpaces = number - 1;
-    for (int row = 1; row <= number + number - 1; row += 2) {
-      for (int i = 0; i <= noOfSpaces; i += 1) {
+    for (int row = 1; row <= 2 * number - 1; row += 2) {
+      for (int i = 1; i <= noOfSpaces; i += 1) {
         System.out.print(" ");
       }
       for (int column = 1; column <= row; column += 1) {

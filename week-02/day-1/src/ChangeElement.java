@@ -15,9 +15,8 @@ public class ChangeElement {
         System.out.print(s[i] + ", ");
       }
       else {
-        System.out.print(s[i]);
+        System.out.println(s[i]);
       }
     }
-
   }
 }

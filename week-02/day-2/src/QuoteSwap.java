@@ -17,7 +17,7 @@ public class QuoteSwap{
   public static String quoteSwap(List swapingWords) {
     int indexDo = swapingWords.indexOf("do");
     int indexCannot = swapingWords.indexOf("cannot");
-  
+
     swapingWords.set(indexDo, "cannot");
     swapingWords.set(indexCannot, "do");
     String theNewSentence1 = "";

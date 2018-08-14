@@ -17,13 +17,13 @@ public class CountLines {
     numberOfLines(fileName);
   }
    public static void numberOfLines(String fileName) {
-    try {
-      Path filePath = Paths.get("my-file.txt");
-      List<String> lines = Files.readAllLines(filePath);
-      System.out.println(lines.size());
-    } catch (IOException e) {
-      e.printStackTrace();
-      System.out.println(0);
-    }
-  }
+      try {
+        Path filePath = Paths.get("my-file.txt");
+        List<String> lines = Files.readAllLines(filePath);
+        System.out.println(lines.size());
+      } catch (IOException e) {
+        e.printStackTrace();
+        System.out.println(0);
+      }
+     }
 }

@@ -15,6 +15,7 @@ public class QuoteSwap{
     // Expected output: "What I cannot create I do not understand."
 
   }
+  //simán kicseréli a két szót, de egy array listet ad vissza, ami nem a feladat
   public static ArrayList<String> quoteSwap(ArrayList<String> swapWords) {
     swapWords.set(2, "cannot");
     swapWords.set(5, "do");

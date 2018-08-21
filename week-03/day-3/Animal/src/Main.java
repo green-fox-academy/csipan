@@ -1,7 +1,7 @@
 public class Main {
   public static void main(String[] args) {
     Animal firstAnimal = new Animal();
-    firstAnimal.name = "Buksi a kutya";
+    firstAnimal.name = "Szegfű";
     System.out.println(firstAnimal.name);
 
     for (int i = 0; i < 50; i += 1) {

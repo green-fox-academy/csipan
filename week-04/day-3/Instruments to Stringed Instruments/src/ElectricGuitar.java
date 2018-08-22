@@ -14,6 +14,6 @@ public class ElectricGuitar extends StringedInstrument {
 
   @Override
   public void sound() {
-    System.out.println("Twang");
+    System.out.println(name + ", a " + numberOfStrings + "- stringed instrument that goes Twang");
   }
 }

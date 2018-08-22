@@ -14,6 +14,6 @@ public class BassGuitar extends StringedInstrument {
 
   @Override
   public void sound() {
-    System.out.println("Duum-duum-duum");
+    System.out.println(name + ", a " + numberOfStrings + "- stringed instrument that goes Duum-duum-duum");
   }
 }

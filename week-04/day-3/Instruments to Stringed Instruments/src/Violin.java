@@ -4,8 +4,12 @@ public class Violin extends StringedInstrument {
     super(4, "Violin");
   }
 
+  public Violin(int numberOfStrings) {
+    super(numberOfStrings, "Violin");
+  }
+
   @Override
   public void sound() {
-    System.out.println(name + ", a " + numberOfStrings + "- stringed instrument that goes Screech");
+    System.out.println(name + ", a " + numberOfStrings + "-stringed instrument that goes Screech");
   }
 }

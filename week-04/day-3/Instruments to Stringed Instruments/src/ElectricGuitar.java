@@ -4,9 +4,9 @@ public class ElectricGuitar extends StringedInstrument {
     super(6, "Electric Guitar");
   }
 
-//  public ElectricGuitar(int numberOfStrings) {
-//    this.numberOfStrings = numberOfStrings;
-//  }
+  public ElectricGuitar(int numberOfStrings) {
+    super(numberOfStrings, "Electric Guitar");
+  }
 
 //  public ElectricGuitar(){
 //    return;
@@ -14,6 +14,6 @@ public class ElectricGuitar extends StringedInstrument {
 
   @Override
   public void sound() {
-    System.out.println(name + ", a " + numberOfStrings + "- stringed instrument that goes Twang");
+    System.out.println(name + ", a " + numberOfStrings + "-stringed instrument that goes Twang");
   }
 }

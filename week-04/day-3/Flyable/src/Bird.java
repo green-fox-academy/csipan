@@ -1,7 +1,7 @@
 public class Bird extends Animal implements Flyable {
 
-  public Bird(String name) {
-    super(name);
+  public Bird(String name, String color, String weight) {
+    super(name, color, weight);
   }
 
   @Override
@@ -16,7 +16,7 @@ public class Bird extends Animal implements Flyable {
 
   @Override
   public String land() {
-    return "horizontally";
+    return "horizontally.";
   }
 
   @Override
@@ -27,5 +27,10 @@ public class Bird extends Animal implements Flyable {
   @Override
   public String takeOff() {
     return "horizontally";
+  }
+
+  @Override
+  public int maxSpeed() {
+    return 190;
   }
 }

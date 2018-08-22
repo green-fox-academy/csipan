@@ -5,4 +5,6 @@ public interface Flyable {
   String fly();
 
   String takeOff();
+
+  int maxSpeed();
 }

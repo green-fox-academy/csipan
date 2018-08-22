@@ -1,4 +1,5 @@
 public class Helicopter extends Vehicle implements Flyable {
+
   public Helicopter(String name, String color, String weight) {
     this.name = name;
     this.color = color;

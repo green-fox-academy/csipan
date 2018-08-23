@@ -8,7 +8,7 @@ public class AnagramTest {
   public void checkTwoWords() {
     String firstWord = "toronymorgas";
     String secondWord = "gyomorrontas";
-    assertTrue(Anagram.checkIfAnagram(firstWord, secondWord));
+    assertEquals(true, Anagram.checkIfAnagram(firstWord, secondWord));
   }
 
 }

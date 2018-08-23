@@ -3,9 +3,8 @@ import java.util.ArrayList;
 public class Sum {
   ArrayList<Integer> listOfNumbers = new ArrayList<>();
 
-  public void addNumber(int numbers, int numbers1) {
+  public void addNumber(int numbers) {
     listOfNumbers.add(numbers);
-    listOfNumbers.add(numbers1);
   }
 
   public int sumOfTheList() {

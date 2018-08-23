@@ -8,7 +8,8 @@ public class SumTest {
   @Test
   public void addNumberToListGetSum () {
     Sum newNumber = new Sum();
-    newNumber.addNumber(15, 16);
+    newNumber.addNumber(15);
+    newNumber.addNumber(16);
     Assert.assertEquals(31, newNumber.sumOfTheList());
   }
 

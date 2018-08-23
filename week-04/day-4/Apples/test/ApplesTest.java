@@ -9,4 +9,5 @@ public class ApplesTest {
     Apples apples = new Apples();
     assertEquals("apple", apples.getApple());
   }
+
 }

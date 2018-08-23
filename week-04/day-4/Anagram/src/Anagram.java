@@ -14,6 +14,6 @@ public class Anagram {
     for (int i = 0; i < secondAnagramWord.length(); i += 1) {
       charactersOfSecondWord.add(secondAnagramWord.charAt(i));
     }
-    return charactersOfFirstWord.containsAll(charactersOfSecondWord);
+    return (charactersOfFirstWord.containsAll(charactersOfSecondWord) && charactersOfSecondWord.containsAll(charactersOfFirstWord));
   }
 }

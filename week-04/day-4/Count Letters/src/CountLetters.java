@@ -3,5 +3,6 @@ import java.util.Map;
 
 public class CountLetters {
 
-  Map<String, Integer> wordForMaping = new HashMap<>();
+  HashMap<String, Integer> wordForMaping = new HashMap<String, Integer>();
+
 }

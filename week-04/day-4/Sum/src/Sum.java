@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Sum {
   ArrayList<Integer> listOfNumbers = new ArrayList<>();
 
-  public void addNumber(int numbers) {
+  public void addNumber(int numbers)   {
     listOfNumbers.add(numbers);
   }
 

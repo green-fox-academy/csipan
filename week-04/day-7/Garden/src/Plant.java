@@ -16,7 +16,7 @@ public class Plant {
       return "Yes";
     }
     else {
-      return "No";
+      return "N o";
     }
 
   }

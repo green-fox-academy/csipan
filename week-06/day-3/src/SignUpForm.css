@@ -12,9 +12,10 @@ form {
 body {
     background: #CCCCCC;
 }
-form div {
-    margin-bottom: 30px;
+div [class="left_side"] {
+    width: 100px;
 }
+
 #account_login {
     font-size: 50px;
 }
@@ -25,6 +26,7 @@ form div {
     padding: 5px;
     border: 0px;
     border-bottom: 3px solid rgb(22, 160, 133);
+    margin-top: 50px;
 }
 
 #email {
@@ -34,6 +36,7 @@ form div {
     padding: 5px;
     border: 0px;
     border-bottom: 1px solid rgb(170, 170, 170);
+    margin-top: 30px;
 }
 
 #password {
@@ -43,6 +46,7 @@ form div {
     padding: 5px;
     border: 0px;
     border-bottom: 1px solid rgb(170, 170, 170);
+    margin-top: 30px;
 }
 
 #re_password {
@@ -52,6 +56,7 @@ form div {
     padding: 5px;
     border: 0px;
     border-bottom: 1px solid rgb(170, 170, 170);
+    margin-top: 30px;
 }
 
 #signMeIn {
@@ -63,6 +68,7 @@ form div {
     border-radius: 4px;
     font-size: 15px;
     font-weight: bold;
+    margin-top: 70px;
 }
 
 #or {

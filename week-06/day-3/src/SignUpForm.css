@@ -1,0 +1,78 @@
+form {
+    /* Just to center the form on the page */
+    margin: 150px auto;
+    width: 800px;
+    height: 500px;
+    /* To see the outline of the form */
+    padding: 50px;
+    /*border: 1px solid #CCC;*/
+    /*border-radius: 4px;*/
+    background-color: white;
+}
+body {
+    background: #CCCCCC;
+}
+form div {
+    margin-bottom: 30px;
+}
+#account_login {
+    font-size: 50px;
+}
+#username {
+    width: 250px;
+    height: 30px;
+    font-size: 15px;
+    padding: 5px;
+    border: 0px;
+    border-bottom: 3px solid rgb(22, 160, 133);
+}
+
+#email {
+    width: 250px;
+    height: 30px;
+    font-size: 15px;
+    padding: 5px;
+    border: 0px;
+    border-bottom: 1px solid rgb(170, 170, 170);
+}
+
+#password {
+    width: 250px;
+    height: 30px;
+    font-size: 15px;
+    padding: 5px;
+    border: 0px;
+    border-bottom: 1px solid rgb(170, 170, 170);
+}
+
+#re_password {
+    width: 250px;
+    height: 30px;
+    font-size: 15px;
+    padding: 5px;
+    border: 0px;
+    border-bottom: 1px solid rgb(170, 170, 170);
+}
+
+#signMeIn {
+    background-color: rgb(22, 160, 133);
+    color: white;
+    height: 50px;
+    width: 200px;
+    border: 0px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#or {
+    background-color: rgb(221, 221, 221);
+    color: black;
+    height: 50px;
+    width: 50px;
+    border: black;
+    border-radius: 30px;
+    font-size: 15px;
+    margin-left: 350px;
+    margin-top: -2000px;
+}

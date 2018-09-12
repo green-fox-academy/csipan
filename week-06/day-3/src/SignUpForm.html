@@ -4,25 +4,43 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="SignUpForm.css">
+    <style type="text/css">
+
+        .left_side {
+            width: 350px;
+            float:left;
+        }
+        .middle {
+            width: 100px;
+            float:left;
+            padding-top: 250px;
+        }
+        .right_side {
+            width: 350px;
+            height: 500px;
+            float:left;
+        }
+    </style>
 </head>
 <body>
 <form action="https://newsletter-ws.herokuapp.com/register" method="post">
-    <div class="left_side">
-        <label id="account_login" for="account_login">Sign Up</label> <br>
-           <input type="text" id="username" name="name" placeholder="Username"> <br>
-           <input type="email" id="email" name="email" placeholder="E-mail"> <br>
-           <input type="password" id="password" name="password" placeholder="Password"> <br>
-           <input type="password" id="re_password" name="passwordConfirmation" placeholder="Retype-password"> <br>
-           <button type="submit" id="signMeIn">SIGN ME UP</button>
-    </div>
-    <div class="middle">
-        <button type="submit" id="or">OR</button> <br>
-    </div>
-    <div class="right_side">
-        <button type="login" id="facebook">Log in with facebook</button> <br>
-        <button type="login" id="twitter">Log in with Twitter</button> <br>
-        <button type="login" id="google">Log in with Google+</button> <br>
-    </div>
+        <div class="left_side">
+            <label id="account_login" for="account_login">Sign Up</label> <br>
+            <input type="text" id="username" name="name" placeholder="Username"> <br>
+            <input type="email" id="email" name="email" placeholder="E-mail"> <br>
+            <input type="password" id="password" name="password" placeholder="Password"> <br>
+            <input type="password" id="re_password" name="passwordConfirmation" placeholder="Retype-password"> <br>
+            <button type="submit" id="signMeIn" onclick="return confirm('Passwords does not match, please try again!')">SIGN ME UP</button>
+        </div>
+        <div class="middle">
+            <button type="submit" id="or">OR</button> <br>
+        </div>
+        <div class="right_side">
+            <table align="right"></table>
+            <button type="login" id="facebook">Log in with facebook</button> <br>
+            <button type="login" id="twitter">Log in with Twitter</button> <br>
+            <button type="login" id="google">Log in with Google+</button> <br>
+        </div>
 </form>
 </body>
 </html>

@@ -13,7 +13,8 @@ th {
     /*border-collapse: collapse;*/
     background-color: rgb(27, 30, 36);
     color: rgb(199, 208, 215);
-    font-size: 25px;
+    font-size: 28px;
+    font-weight: inherit;
     padding-right: 250px;
     height: 60px;
 }
@@ -36,12 +37,12 @@ td:nth-child(even) {
     height: 60px;
 }
 th:nth-child(odd) {
-    padding-right: 230px;
+    padding-right: 235px;
     height: 60px;
 
 }
 th:nth-child(even) {
-    padding-right: 350px;
+    padding-right: 345px;
     height: 60px;
 
 }

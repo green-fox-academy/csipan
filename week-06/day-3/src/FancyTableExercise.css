@@ -1,15 +1,47 @@
-table, td, th {
-    border:  2px solid rgb(158, 167, 175);
-    border-collapse: collapse;
-    width: 1000px;
-    height: 50px;
-}
+/*table, td, th {*/
+    /*border: solid rgb(158, 167, 175);*/
+    /*border-collapse: collapse;*/
+/*}*/
 
 table {
     border: 25px solid rgb(62, 148, 236);
+    border-collapse: collapse;
 }
 
-thead {
+th {
+    border: solid rgb(52, 58, 67);
+    /*border-collapse: collapse;*/
     background-color: rgb(27, 30, 36);
-    color: rgb(175, 181, 189);
+    color: rgb(199, 208, 215);
+    font-size: 25px;
+    padding-right: 250px;
+    height: 60px;
+}
+td {
+    border: 2px solid rgb(158, 167, 175);
+    border-collapse: collapse;
+    font-size: 25px;
+    padding-left: 50px;
+    color: rgb(102, 106, 133);
+}
+tr:nth-child(odd) {
+    background-color: rgb(235, 235, 235);
+}
+td:nth-child(odd) {
+    width: 350px;
+    height: 60px;
+}
+td:nth-child(even) {
+    width: 450px;
+    height: 60px;
+}
+th:nth-child(odd) {
+    padding-right: 230px;
+    height: 60px;
+
+}
+th:nth-child(even) {
+    padding-right: 350px;
+    height: 60px;
+
 }

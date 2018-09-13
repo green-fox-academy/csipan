@@ -34,6 +34,6 @@ public class Todos {
   }
 
   public String toString() {
-    return id + " " + (completed ? "[x] " : "[ ] ") + " " + name;
+    return id + " " + (completed ? "[x] " : "[ ] ") + " " + name + "\n";
   }
 }

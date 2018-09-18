@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Account</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body><h2>Bank Account</h2>
+
+<table>
+    <tr>
+        <th>Bank Account Name</th>
+        <th>Balance</th>
+        <th>Animal Type</th>
+    </tr>
+    <tr>
+        <td th:text="${bankaccount.name}"> </td>
+        <td th:text="${bankaccount.balance}"> </td>
+        <td th:text="${bankaccount.animalType}"> </td>
+    </tr>
+</table>
+</body>
+</html>

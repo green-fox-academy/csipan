@@ -24,17 +24,22 @@
 <body><h2>Bank Account</h2>
 <table>
     <tr>
+        <th>Index</th>
         <th>Bank Account Name</th>
         <th>Balance in Zebra</th>
         <th>Animal Type</th>
     </tr>
-      <tr th:each="account : ${allaccount}" th:object="${account}">
-        <td  th:text="*{name}"></td>
+    <tr th:each="account : ${allaccount}" th:object="${account}">
+        <td th:text="${accountStat.count}"></td>
+        <!--<td th:text="${accountStat.index}"></td> - is giving the index of the object -->
+        <td th:text="*{name}"></td>
         <td th:text="*{#numbers.formatDecimal(balance, 0, 'POINT', 2, 'COMMA') + ' Zebra'}"></td>
         <td th:text="*{animalType}"></td>
     </tr>
-</table></br>
-<td th:utext="${showman}"></td></br>
+</table>
+</br>
+<td th:utext="${showman}"></td>
+</br>
 <td th:text="${showman}"></td>
 </div>
 </body>

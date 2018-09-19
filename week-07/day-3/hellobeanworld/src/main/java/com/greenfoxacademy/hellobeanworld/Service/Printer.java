@@ -1,4 +1,4 @@
-package com.greenfoxacademy.hellobeanworld;
+package com.greenfoxacademy.hellobeanworld.Service;
 
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;

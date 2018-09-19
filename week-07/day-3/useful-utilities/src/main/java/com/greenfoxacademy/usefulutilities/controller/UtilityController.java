@@ -30,8 +30,23 @@ public class UtilityController {
 
   @GetMapping(value = "/useful/email")
   public String validateEmail(@RequestParam(value = "email") String email, Model model) {
-    model.addAttribute("email", email);
     model.addAttribute("validateEmail", utilityService.validateEmail(email));
     return "email";
+  }
+
+  @GetMapping(value = "/useful/encoder")
+  public String encoder(@RequestParam(value = "text") String text, @RequestParam(value = "number") int number, Model model) {
+    model.addAttribute("validateEncoder", utilityService.caesar(text, number));
+    model.addAttribute("text", text);
+    model.addAttribute("number", number);
+    return "encoder";
+  }
+
+  @GetMapping(value = "/useful/decoder")
+  public String decoder(@RequestParam(value = "text") String text, @RequestParam(value = "number") int number, Model model) {
+    model.addAttribute("text", text);
+    model.addAttribute("number", number);
+    model.addAttribute("validateDecoder", utilityService.caesar(text, -number));
+    return "decoder";
   }
 }

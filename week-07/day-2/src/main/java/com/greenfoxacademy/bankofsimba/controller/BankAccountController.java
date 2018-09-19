@@ -30,6 +30,7 @@ public class BankAccountController {
 
   @RequestMapping(value = "/all")
   public String allAccount(Model model) {
+    allAccount.add(new BankAccount("Simba", 2000, "Lion"));
     allAccount.add(new BankAccount("Timon", 1000, "Meerkat"));
     allAccount.add(new BankAccount("Pumba", 1000, "Warthog"));
     allAccount.add(new BankAccount("Rafiki", 1500, "Mandrill"));

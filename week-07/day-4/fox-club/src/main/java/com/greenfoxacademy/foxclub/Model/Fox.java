@@ -2,13 +2,26 @@ package com.greenfoxacademy.foxclub.Model;
 
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class Fox {
 
   private String name;
   private String food;
   private String drink;
-  private long numberOfTricks;
+  private List<String> tricks;
+
+  public Fox() {
+    tricks = new ArrayList<>();
+  }
+
+  public Fox(String name, String food, String drink) {
+    this.name = name;
+    this.food = food;
+    this.drink = drink;
+  }
 
   public void setName(String name) {
     this.name = name;
@@ -20,10 +33,6 @@ public class Fox {
 
   public void setDrink(String drink) {
     this.drink = drink;
-  }
-
-  public void setNumberOfTricks(long numberOfTricks) {
-    this.numberOfTricks = numberOfTricks;
   }
 
   public String getName() {
@@ -38,18 +47,12 @@ public class Fox {
     return drink;
   }
 
-  public long getNumberOfTricks() {
-    return numberOfTricks;
+  public List<String> getTricks() {
+    return tricks;
   }
 
-  public Fox(){
-
+  public void setTricks(List<String> tricks) {
+    this.tricks = tricks;
   }
 
-  public Fox(String name, String food, String drink, long numberOfTricks) {
-    this.name = name;
-    this.food = food;
-    this.drink = drink;
-    this.numberOfTricks = numberOfTricks;
-  }
 }

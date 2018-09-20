@@ -1,6 +1,6 @@
 package com.greenfoxacademy.foxclub.Controller;
 
-import com.greenfoxacademy.foxclub.Model.Fox;
+import com.greenfoxacademy.foxclub.Model.FoxPack;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,16 +9,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
-
 @Controller
 public class MainController {
 
-  private Fox fox;
+  private FoxPack foxes;
 
   @Autowired
-  public MainController(Fox fox) {
-    this.fox = fox;
+  public MainController(FoxPack foxes) {
+    this.foxes = foxes;
   }
 
   @GetMapping(value = "/")
@@ -26,9 +24,9 @@ public class MainController {
     if (name == null) {
       return "redirect:/login";
     }
-    if (name.equals(fox.getName())) {
-      model.addAttribute("foxName", fox.getName());
-      model.addAttribute("foxFood", fox.getFood());
+    if (foxes.isOrNotTheFoxInThePack(name)) {
+      model.addAttribute("foxName", name);
+      model.addAttribute("foxFood", name);
       return "index";
     } else {
       return "redirect:/login";
@@ -42,7 +40,7 @@ public class MainController {
 
   @PostMapping(value = "/login")
   public String postFoxName(@ModelAttribute(value = "name") String name) {
-    fox.setName(name);
+    foxes.createFoxByName(name);
     return "redirect:/?name=" + name;
   }
 }

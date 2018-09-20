@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class BankAccountController {
 
   BankAccount bankAccount = new BankAccount("Simba", 2000, "Lion");
-  ArrayList<BankAccount> allAccount = new ArrayList<>();
+
   String showMan = "This is an <em>HTML</em> text. <b>Enjoy yourself!</b>";
 
   @RequestMapping(value = "/show")
@@ -30,6 +30,7 @@ public class BankAccountController {
 
   @RequestMapping(value = "/all")
   public String allAccount(Model model) {
+    ArrayList<BankAccount> allAccount = new ArrayList<>();
     allAccount.add(new BankAccount("Simba", 2000, "Lion"));
     allAccount.add(new BankAccount("Timon", 1000, "Meerkat"));
     allAccount.add(new BankAccount("Pumba", 1000, "Warthog"));

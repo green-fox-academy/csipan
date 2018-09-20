@@ -13,7 +13,6 @@ import java.util.List;
 public class BankAccountController {
 
   BankAccount bankAccount = new BankAccount("Simba", 2000, "Lion");
-
   String showMan = "This is an <em>HTML</em> text. <b>Enjoy yourself!</b>";
 
   List<BankAccount> accounts = allBankAccount();
@@ -24,6 +23,7 @@ public class BankAccountController {
     allAccount.add(new BankAccount("Timon", 1000, "Meerkat"));
     allAccount.add(new BankAccount("Pumba", 1000, "Warthog"));
     allAccount.add(new BankAccount("Rafiki", 1500, "Mandrill"));
+    allAccount.add(new BankAccount("Zordon", -500, "Lion"));
     allAccount.add(new BankAccount("Zazu", 500, "Red-billed hornbill"));
   return allAccount;
   }
@@ -43,10 +43,13 @@ public class BankAccountController {
   }
 
   @GetMapping(value = "/all")
-  public String allAccount(Model model) {
+  public String kingOrNot(Model model) {
     for (BankAccount account : accounts) {
       if (account.getAnimalType().equals("Lion")) {
         account.setKing(true);
+      }
+      if (account.getBalance() >= 1500) {
+        account.setGood(true);
       }
     }
     model.addAttribute("allaccount", accounts);

@@ -5,6 +5,7 @@ public class BankAccount {
   private long balance;
   private String animalType;
   private boolean isKing;
+  private boolean isGood;
 
   public BankAccount(String name, long balance, String animalType) {
     this.name = name;
@@ -43,5 +44,13 @@ public class BankAccount {
 
   public void setKing(boolean king) {
     isKing = king;
+  }
+
+  public boolean isGood() {
+    return isGood;
+  }
+
+  public void setGood(boolean good) {
+    isGood = good;
   }
 }

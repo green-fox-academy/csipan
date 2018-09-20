@@ -10,9 +10,14 @@
             width: 100%;
         }
 
-        td, th {
+        td {
             border: 1px solid #dddddd;
             text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            border: 1px solid #dddddd;
             padding: 8px;
         }
 
@@ -26,9 +31,10 @@
     <tr>
         <th>Index</th>
         <th>Bank Account Name</th>
-        <th>Balance in Zebra</th>
+        <th>Balance</th>
         <th>Animal Type</th>
         <th>King / Peasant</th>
+        <th>Bad Guy / Good Guy</th>
     </tr>
     <tr th:each="account : ${allaccount}" th:object="${account}">
         <td th:text="${accountStat.count}"></td>
@@ -36,6 +42,7 @@
         <td th:text="*{#numbers.formatDecimal(balance, 0, 'POINT', 2, 'COMMA') + ' Zebra'}"></td>
         <td th:text="*{animalType}"></td>
         <td th:text="*{isKing()} ? 'King' : 'Peasant'"></td>
+        <td th:text="*{isGood()} ? 'Good Guy' : 'Bad Guy'"></td>
     </tr>
 </table>
 </br>

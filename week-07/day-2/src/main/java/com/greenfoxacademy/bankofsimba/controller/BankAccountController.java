@@ -56,7 +56,7 @@ public class BankAccountController {
   }
 
   @PostMapping(value = "donate")
-  public String addBalance(@RequestParam(value = "index") int index) {
+  public String addDonateToBalance(@RequestParam(value = "index") int index) {
     if (accounts.get(index).getAnimalType().equals("Lion")) {
       accounts.get(index).setBalance(accounts.get(index).getBalance() + 100);
     } else {

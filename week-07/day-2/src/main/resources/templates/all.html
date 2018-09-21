@@ -45,7 +45,7 @@
         <td th:text="*{isKing()} ? 'King' : 'Peasant'"></td>
         <td th:text="*{isGood()} ? 'Good Guy' : 'Bad Guy'"></td>
         <td>
-            <form action="donate" method="post">
+            <form method="post" action="donate">
                 <input type="hidden" th:value="${accountStat.index}" name="index">
                 <input type="submit" value="Donate">
             </form>

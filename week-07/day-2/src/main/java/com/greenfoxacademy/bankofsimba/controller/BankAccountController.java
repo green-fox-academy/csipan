@@ -3,8 +3,7 @@ package com.greenfoxacademy.bankofsimba.controller;
 import com.greenfoxacademy.bankofsimba.model.BankAccount;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +24,7 @@ public class BankAccountController {
     allAccount.add(new BankAccount("Rafiki", 1500, "Mandrill"));
     allAccount.add(new BankAccount("Zordon", -500, "Lion"));
     allAccount.add(new BankAccount("Zazu", 500, "Red-billed hornbill"));
-  return allAccount;
+    return allAccount;
   }
 
   @RequestMapping(value = "/show")
@@ -48,11 +47,21 @@ public class BankAccountController {
       if (account.getAnimalType().equals("Lion")) {
         account.setKing(true);
       }
-      if (account.getBalance() >= 1500) {
+      if (account.getBalance() > 1500) {
         account.setGood(true);
       }
     }
     model.addAttribute("allaccount", accounts);
     return "all";
+  }
+
+  @PostMapping(value = "donate")
+  public String addBalance(@RequestParam(value = "index") int index) {
+    if (accounts.get(index).getAnimalType().equals("Lion")) {
+      accounts.get(index).setBalance(accounts.get(index).getBalance() + 100);
+    } else {
+      accounts.get(index).setBalance(accounts.get(index).getBalance() + 10);
+    }
+    return "redirect:/all";
   }
 }

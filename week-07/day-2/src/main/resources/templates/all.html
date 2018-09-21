@@ -35,6 +35,7 @@
         <th>Animal Type</th>
         <th>King / Peasant</th>
         <th>Bad Guy / Good Guy</th>
+        <th>Donate</th>
     </tr>
     <tr th:each="account : ${allaccount}" th:object="${account}">
         <td th:text="${accountStat.count}"></td>
@@ -43,6 +44,13 @@
         <td th:text="*{animalType}"></td>
         <td th:text="*{isKing()} ? 'King' : 'Peasant'"></td>
         <td th:text="*{isGood()} ? 'Good Guy' : 'Bad Guy'"></td>
+        <td>
+            <form action="donate" method="post">
+                <input type="hidden" th:value="${accountStat.index}" name="index">
+                <input type="submit" value="Donate">
+            </form>
+        </td>
+
     </tr>
 </table>
 </br>

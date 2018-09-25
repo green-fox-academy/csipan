@@ -17,8 +17,10 @@ public class Todo {
   public Todo() {
 
   }
-  public Todo(String title) {
+  public Todo(String title, boolean urgent, boolean done) {
     this.title = title;
+    this.urgent = urgent;
+    this.done = done;
   }
 
   public long getId() {

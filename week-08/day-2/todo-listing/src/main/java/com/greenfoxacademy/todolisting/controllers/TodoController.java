@@ -5,10 +5,7 @@ import com.greenfoxacademy.todolisting.repositories.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/todo")
@@ -39,6 +36,12 @@ public class TodoController {
   @PostMapping(value = "/add")
   public String addNewTodo(Model model, @RequestParam(value = "addNewTodo", required = false) String addNewTodo) {
     model.addAttribute("addNewTodo", todoRepository.save(new Todo(addNewTodo)));
-    return "redirect:/todo/";
+    return "redirect:";
+  }
+
+  @PostMapping(value = "/removeTodo")
+  public String removeTodo(@ModelAttribute(value = "remove") long id) {
+    todoRepository.deleteById(id);
+    return "redirect:";
   }
 }

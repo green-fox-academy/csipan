@@ -9,6 +9,7 @@
 <h1>Todays Todo List:</h1>
 <a href="?isActive=true">It is not done</a>
 <a href="/todo/add">Add new todo</a>
+<a href="/todo/">Main page</a>
 <br><br>
 <table>
     <tr>
@@ -16,12 +17,19 @@
         <th>ACTION</th>
         <th>URGENT</th>
         <th>DONE</th>
+        <th></th>
     </tr>
     <tr th:each="todos : ${todolist}" th:object="${todos}">
         <td th:text="*{id}"></td>
         <td th:text="*{title}"></td>
         <td th:text="*{isUrgent()}"></td>
         <td th:text="*{isDone()}"></td>
+        <td>
+            <form method="post" action="/todo/removeTodo">
+                <input type="hidden" th:value="*{id}" name="remove">
+                <input type="submit" value="Delete">
+            </form>
+        </td>
     </tr>
 </table>
 </body>

@@ -15,8 +15,11 @@ public class Todo {
   private boolean done = false;
 
   public Todo() {
-
   }
+
+//  public Todo(long id) {
+//    this.id = id;
+//  }
 
   public Todo(String title) {
     this.title = title;

@@ -14,6 +14,13 @@ public class Todo {
   private boolean urgent = false;
   private boolean done = false;
 
+  public Todo() {
+
+  }
+  public Todo(String title) {
+    this.title = title;
+  }
+
   public long getId() {
     return id;
   }

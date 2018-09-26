@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <link rel="stylesheet" th:href="@{/frontend.css}"/>
     <title>Todos for today:</title>
 
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
@@ -11,10 +11,12 @@
 </head>
 <body>
 <h1>Todays Todo List:</h1>
-<a href="?isActive=true">It is not done</a>
-<a href="/todo/add">Add new todo</a>
-<a href="/todo/">Main page</a>
-<br><br>
+<div class="alink">
+    <a href="?isActive=true">It is not done</a>
+    <a href="/todo/add">Add new todo</a>
+    <a href="/todo/">Main page</a>
+    <br><br>
+</div>
 <table>
     <tr>
         <th>ID</th>
@@ -32,7 +34,7 @@
         <td>
             <form method="post" action="/todo/removeTodo">
                 <input type="hidden" th:value="*{id}" name="remove">
-                <input type="submit" value="Delete">
+                <input type="submit" value="Delete" class="inputbutton">
             </form>
         </td>
         <td>

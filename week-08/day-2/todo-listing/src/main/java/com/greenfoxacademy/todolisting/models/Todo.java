@@ -17,10 +17,6 @@ public class Todo {
   public Todo() {
   }
 
-//  public Todo(long id) {
-//    this.id = id;
-//  }
-
   public Todo(String title) {
     this.title = title;
     this.urgent = false;

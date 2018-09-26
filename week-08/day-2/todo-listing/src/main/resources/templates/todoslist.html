@@ -18,6 +18,7 @@
         <th>URGENT</th>
         <th>DONE</th>
         <th></th>
+        <th></th>
     </tr>
     <tr th:each="todos : ${todolist}" th:object="${todos}">
         <td th:text="*{id}"></td>
@@ -29,6 +30,11 @@
                 <input type="hidden" th:value="*{id}" name="remove">
                 <input type="submit" value="Delete">
             </form>
+        </td>
+        <td>
+            <a th:href="'/todo/' + *{id} + '/edit'">
+                <button>Edit</button>
+            </a>
         </td>
     </tr>
 </table>

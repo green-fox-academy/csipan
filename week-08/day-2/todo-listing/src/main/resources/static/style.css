@@ -3,7 +3,7 @@ table {
     border-collapse: separate;
     border-radius: 6px;
     border-spacing: 0;
-    border: 2px solid black;
+    border: 4px solid black;
     width: 100%;}
 
 /* top-left border-radius */
@@ -24,8 +24,9 @@ table tr:last-child td:first-child {
 table tr:last-child td:last-child {
     border-bottom-right-radius: 4px;
 }
+
 .top {
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 35%;
 }
 

@@ -16,7 +16,7 @@ public class TodoListingApplication implements CommandLineRunner {
   private TodoRepository todoRepository;
 
   @Autowired
-  public TodoListingApplication(TodoRepository todoRepository) {
+  public TodoListingApplication(TodoRepository todoRepository)   {
     this.todoRepository = todoRepository;
   }
 

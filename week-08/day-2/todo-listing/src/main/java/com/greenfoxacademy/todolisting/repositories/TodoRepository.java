@@ -1,7 +1,6 @@
 package com.greenfoxacademy.todolisting.repositories;
 
 import com.greenfoxacademy.todolisting.models.Todo;
-import org.omg.PortableServer.LIFESPAN_POLICY_ID;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

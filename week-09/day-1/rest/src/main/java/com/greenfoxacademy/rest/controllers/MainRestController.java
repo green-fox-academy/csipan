@@ -1,16 +1,11 @@
 package com.greenfoxacademy.rest.controllers;
 
-import com.greenfoxacademy.rest.services.AppendService;
-import com.greenfoxacademy.rest.services.DoubleService;
-import com.greenfoxacademy.rest.services.ErrorMessagesService;
-import com.greenfoxacademy.rest.services.GreetingService;
+import com.greenfoxacademy.rest.modells.Until;
+import com.greenfoxacademy.rest.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class MainRestController {
@@ -19,14 +14,16 @@ public class MainRestController {
   private GreetingService greetingService;
   private ErrorMessagesService errorMessagesService;
   private AppendService appendService;
+  private DoUntilService doUntilService;
 
   @Autowired
   public MainRestController(DoubleService doubleService, GreetingService greetingService, ErrorMessagesService errorMessagesService,
-                            AppendService appendService) {
+                            AppendService appendService, DoUntilService doUntilService) {
     this.doubleService = doubleService;
     this.greetingService = greetingService;
     this.errorMessagesService = errorMessagesService;
     this.appendService = appendService;
+    this.doUntilService = doUntilService;
   }
 
   @GetMapping(value = "/doubling")
@@ -66,5 +63,20 @@ public class MainRestController {
       appendService.generateWord(word);
       return ResponseEntity.ok(appendService.getAppendA());
     }
+  }
+
+  @PostMapping(value = "/dountil/{action}")
+  public Object sumUntil(@RequestBody(required = false) Until until, @PathVariable(value = "action", required = false) String action) {
+    if (action == null) {
+      errorMessagesService.setMessage("Please provide a number!");
+      return errorMessagesService.getErrorMessages();
+    } else if (until == null) {
+      errorMessagesService.setMessage("Please provide a number!");
+      return errorMessagesService.getErrorMessages();
+    } else {
+      doUntilService.actionType(action, until);
+      return doUntilService.getResult();
+    }
+
   }
 }

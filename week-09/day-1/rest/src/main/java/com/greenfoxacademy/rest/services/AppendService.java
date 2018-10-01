@@ -10,7 +10,6 @@ public class AppendService {
   private AppendA appendA;
 
   @Autowired
-
   public AppendService(AppendA appendA) {
     this.appendA = appendA;
   }

@@ -31,16 +31,21 @@ public class AssigneeServiceImplementation implements AssigneeService {
 
   @Override
   public void removeAssignee(long id) {
-
+    assigneeRepository.deleteById(id);
   }
 
   @Override
   public void editAssignee(Model model, long id) {
-
+    model.addAttribute("editAssignee", assigneeRepository.findById(id).orElse(null));
   }
 
   @Override
-  public void saveAssigne(Assignee assignee) {
+  public void saveAssignee(Assignee assignee) {
+    assigneeRepository.save(assignee);
+  }
 
+  @Override
+  public void searchByAssignee(Model model, String searchByAssignee) {
+    model.addAttribute("assigneelist", assigneeRepository.findByNameContaining(searchByAssignee));
   }
 }

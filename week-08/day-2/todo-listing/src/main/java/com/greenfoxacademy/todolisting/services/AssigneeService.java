@@ -15,5 +15,7 @@ public interface AssigneeService {
 
   void editAssignee(Model model, long id);
 
-  void saveAssigne(Assignee assignee);
+  void saveAssignee(Assignee assignee);
+
+  void searchByAssignee(Model model, String searchByAssignee);
 }

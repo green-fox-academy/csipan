@@ -9,7 +9,8 @@
 <h1>Assignee List:</h1>
 <div class="alink">
     <a href="/assignee/add">Add new assignee</a>
-    <a href="/assignee/search">Search</a>
+    <a href="/assignee/">Main page</a>
+    <a href="/assignee/searchAssignee">Search</a>
     <br><br>
 </div>
 <table>
@@ -25,13 +26,13 @@
         <td th:text="*{name}"></td>
         <td th:text="*{email}"></td>
         <td>
-            <form method="post" action="/todo/removeTodo">
+            <form method="post" action="/assignee/removeAssignee">
                 <input type="hidden" th:value="*{id}" name="remove">
                 <input type="submit" value="Delete" class="inputbutton">
             </form>
         </td>
         <td>
-            <a th:href="'/assignee/' + *{id} + '/edit'">
+            <a th:href="'/assignee/' + *{id} + '/editAssignee'">
                 <button class="button">Edit</button>
             </a>
         </td>

@@ -16,12 +16,14 @@
     <a href="/todo/add">Add new todo</a>
     <a href="/todo/">Main page</a>
     <a href="/todo/search">Search</a>
+    <a href="/assignee/">Assignees</a>
     <br><br>
 </div>
 <table>
     <tr>
         <th>ID</th>
         <th>ACTION</th>
+        <th>ASSIGNEE</th>
         <th>URGENT</th>
         <th>DONE</th>
         <th></th>
@@ -30,6 +32,7 @@
     <tr th:each="todos : ${todolist}" th:object="${todos}">
         <td th:text="*{id}"></td>
         <td th:text="*{title}"></td>
+        <td th:text="*{assignee}"></td>
         <td th:text="*{isUrgent()}"></td>
         <td th:text="*{isDone()}"></td>
         <td>

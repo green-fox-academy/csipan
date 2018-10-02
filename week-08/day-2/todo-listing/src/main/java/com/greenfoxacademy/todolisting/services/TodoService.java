@@ -1,5 +1,6 @@
 package com.greenfoxacademy.todolisting.services;
 
+import com.greenfoxacademy.todolisting.models.Assignee;
 import com.greenfoxacademy.todolisting.models.Todo;
 import org.springframework.ui.Model;
 
@@ -16,4 +17,6 @@ public interface TodoService {
   void save(Todo todo);
 
   void searchByTitle(Model model, String searchByTitle);
+
+  Todo addAssigneeToTodo(Assignee assignee, long id);
 }

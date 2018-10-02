@@ -1,9 +1,6 @@
 package com.greenfoxacademy.todolisting.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Todo {
@@ -13,6 +10,9 @@ public class Todo {
   private String title;
   private boolean urgent = false;
   private boolean done = false;
+
+  @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+  private Assignee assignee;
 
   public Todo() {
   }
@@ -27,6 +27,14 @@ public class Todo {
     this.title = title;
     this.urgent = urgent;
     this.done = done;
+  }
+
+  public Assignee getAssignee() {
+    return assignee;
+  }
+
+  public void setAssignee(Assignee assignee) {
+    this.assignee = assignee;
   }
 
   public long getId() {

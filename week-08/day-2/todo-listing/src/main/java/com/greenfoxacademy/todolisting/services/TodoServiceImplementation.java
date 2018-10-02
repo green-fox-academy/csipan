@@ -1,5 +1,6 @@
 package com.greenfoxacademy.todolisting.services;
 
+import com.greenfoxacademy.todolisting.models.Assignee;
 import com.greenfoxacademy.todolisting.models.Todo;
 import com.greenfoxacademy.todolisting.repositories.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,12 @@ public class TodoServiceImplementation implements TodoService {
 
   public void searchByTitle(Model model, String searchTitle) {
     model.addAttribute("todolist", todoRepository.findByTitleContaining(searchTitle));
+  }
+
+  public Todo addAssigneeToTodo(Assignee assignee, long id) {
+   Todo newTodo = todoRepository.findById(id).get();
+   newTodo.setAssignee(assignee);
+   return newTodo;
   }
 
   public void save(Todo todo) {

@@ -25,6 +25,11 @@ public class AssigneeServiceImplementation implements AssigneeService {
   }
 
   @Override
+  public Assignee findById(Long id) {
+    return assigneeRepository.findById(id).get();
+  }
+
+  @Override
   public void addNewAssignee(Model model, String name, String email) {
     model.addAttribute("addNewAssignee", assigneeRepository.save(new Assignee(name,email)));
   }

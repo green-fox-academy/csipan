@@ -54,8 +54,9 @@ public class TodoController {
 
   @PostMapping(value = "/{id}/edit")
   public String editTodo(@ModelAttribute(value = "editTodos") Todo todo,
-                         @ModelAttribute(value = "assignees") Assignee assignee,
+                         @ModelAttribute(value = "assigneeId") Long assigneeId,
                          @PathVariable(value = "id") long id) {
+    Assignee assignee = assigneeService.findById(assigneeId);
     todoService.save(todoService.addAssigneeToTodo(assignee, id));
     return "redirect:/todo/";
   }

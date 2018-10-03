@@ -6,19 +6,19 @@
 </head>
 <body>
 <h1>Edit Todo</h1>
-<form method="POST" th:object="${editTodos}">
+<form method="POST">
     <label>Todo Description</label>
-    <input type="text" th:field="*{title}"><br>
+    <input type="text" th:field="${editTodos.title}"><br>
     <div>
         <label>Assignees</label>
-        <select>
-            <option th:each="assignees : ${assigneelist}" th:text="${assignees.name}" th:value="${assignees}"></option>
+        <select name="assigneeId">
+            <option th:each="assignees : ${assigneelist}" th:text="${assignees.name}" th:value="${assignees.id}"></option>
         </select>
     </div>
     <label>Urgent</label>
-    <input type="checkbox" th:field="*{urgent}"><br>
+    <input type="checkbox" th:field="${editTodos.urgent}"><br>
     <label>Done</label>
-    <input type="checkbox" th:field="*{done}" class="inputbutton"><br><br>
+    <input type="checkbox" th:field="${editTodos.done}" class="inputbutton"><br><br>
     <button type="submit">Submit</button>
     <a href="/todo/">
     <button type="button">Cancel</button>

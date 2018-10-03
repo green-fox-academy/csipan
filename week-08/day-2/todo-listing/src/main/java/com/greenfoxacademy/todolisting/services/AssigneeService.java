@@ -9,6 +9,8 @@ public interface AssigneeService {
 
   List<Assignee> findAll();
 
+  Assignee findById(Long id);
+
   void addNewAssignee(Model model, String name, String email);
 
   void removeAssignee(long id);

@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
+import java.util.List;
+
 @Service
 public class TodoServiceImplementation implements TodoService {
 
@@ -19,7 +21,8 @@ public class TodoServiceImplementation implements TodoService {
 
   public void listOfActivTodos(Model model, String active) {
     if (active == null || active.equals("false")) {
-      model.addAttribute("todolist", todoRepository.findAll());
+      Iterable<Todo> todos = todoRepository.findAll();
+      model.addAttribute("todolist", todos);
     } else {
       model.addAttribute("todolist", todoRepository.findAllByDoneFalse());
     }

@@ -40,8 +40,8 @@ public class TodoServiceImplementation implements TodoService {
     model.addAttribute("editTodos", todoRepository.findById(id).orElse(null));
   }
 
-  public void searchByTitle(Model model, String searchTitle) {
-    model.addAttribute("todolist", todoRepository.findByTitleContaining(searchTitle));
+  public List<Todo> searchByTitle(String searchTitle) {
+    return todoRepository.findByTitleContaining(searchTitle);
   }
 
   public Todo addAssigneeToTodo(Assignee assignee, long id) {

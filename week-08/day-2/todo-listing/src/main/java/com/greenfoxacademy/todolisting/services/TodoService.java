@@ -4,6 +4,8 @@ import com.greenfoxacademy.todolisting.models.Assignee;
 import com.greenfoxacademy.todolisting.models.Todo;
 import org.springframework.ui.Model;
 
+import java.util.List;
+
 public interface TodoService {
 
   void listOfActivTodos(Model model, String active);
@@ -16,7 +18,7 @@ public interface TodoService {
 
   void save(Todo todo);
 
-  void searchByTitle(Model model, String searchByTitle);
+  List<Todo> searchByTitle(String searchByTitle);
 
   Todo addAssigneeToTodo(Assignee assignee, long id);
 }

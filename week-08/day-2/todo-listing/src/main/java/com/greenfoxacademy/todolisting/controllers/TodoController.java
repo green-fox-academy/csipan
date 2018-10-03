@@ -68,7 +68,7 @@ public class TodoController {
 
   @PostMapping(value = "/search")
   public String searchByTitle(Model model, @RequestParam(value = "searchByTitle", required = false) String searchTitle) {
-    todoService.searchByTitle(model, searchTitle);
+    model.addAttribute("todolist", todoService.searchByTitle(searchTitle));
     return "todoslist";
   }
 }

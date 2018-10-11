@@ -50,7 +50,26 @@ public class TodoServiceImplementation implements TodoService {
    return newTodo;
   }
 
+
   public void save(Todo todo) {
     todoRepository.save(todo);
   }
+
+  @Override
+  public List<Todo> getAllUrgent() {
+    List<Todo> todo = todoRepository.findAllByUrgentTrue();
+    return todo;
+  }
+
+  @Override
+  public void addTodo(String todoTitle) {
+    todoRepository.save(new Todo(todoTitle));
+  }
+
+  @Override
+  public List<Todo> findAll() {
+    return todoRepository.findAll();
+  }
+
+
 }

@@ -2,6 +2,7 @@ package com.greenfoxacademy.todolisting.services;
 
 import com.greenfoxacademy.todolisting.models.Assignee;
 import com.greenfoxacademy.todolisting.models.Todo;
+import com.greenfoxacademy.todolisting.models.TodoJson;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 

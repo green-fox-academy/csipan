@@ -2,6 +2,7 @@ package com.greenfoxacademy.todolisting.services;
 
 import com.greenfoxacademy.todolisting.models.Assignee;
 import com.greenfoxacademy.todolisting.models.Todo;
+import com.greenfoxacademy.todolisting.models.TodoJson;
 import com.greenfoxacademy.todolisting.repositories.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -70,6 +71,4 @@ public class TodoServiceImplementation implements TodoService {
   public List<Todo> findAll() {
     return todoRepository.findAll();
   }
-
-
 }

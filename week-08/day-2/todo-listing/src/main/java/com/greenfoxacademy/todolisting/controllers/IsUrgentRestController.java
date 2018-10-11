@@ -2,6 +2,7 @@ package com.greenfoxacademy.todolisting.controllers;
 
 import com.greenfoxacademy.todolisting.models.IsUrgent;
 import com.greenfoxacademy.todolisting.models.Todo;
+import com.greenfoxacademy.todolisting.models.TodoJson;
 import com.greenfoxacademy.todolisting.services.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -26,10 +27,13 @@ public class IsUrgentRestController {
     return todoList;
   }
 
-  @PostMapping(value = "/todo/addTodo")
-  public Object addTodo(@RequestBody(required = false) String todoTitle, @PathVariable(value = "title", required = false) String title) {
-    Todo newTodo = new Todo(todoTitle);
-    todoService.save(newTodo);
-    return newTodo;
+  @PostMapping(value = "/todoJson/addTodo")
+  public Object addTodo(@RequestBody(required = false) TodoJson todoJson) {
+    Todo todo = new Todo();
+    todo.setTitle(todoJson.getTitle());
+    todo.setUrgent(todoJson.getUrgent());
+    todo.setDone(todoJson.getDone());
+    todoService.save(todo);
+    return todo;
   }
 }
